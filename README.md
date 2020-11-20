@@ -11,11 +11,23 @@
 
 # Installation
 
+> **_IMPORTANT_** The package name "saturnjs" is already regisitered but but is not really in use so I am trying to get the owner to transfer the name to me.
+
 ```sh
-yarn add saturn.js
+yarn add saturnjs
 ```
 
 # Usage
+
+```typescript
+import { Client } from 'saturnjs';
+
+const client = new Client('MY_SECRET_TOKEN');
+
+client.loadData().then(() => {
+    console.log(client.user.name); // John Doe
+});
+```
 
 ## Authentication
 
