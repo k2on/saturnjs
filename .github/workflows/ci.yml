@@ -1,0 +1,23 @@
+name: CI
+on:
+    pull_request:
+        branches:
+            - master
+jobs:
+    ci:
+        name: CI tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12
+                  registry-url: https://registry.npmjs.org/
+            - name: yarn install
+              run: yarn install
+            - name: lint
+              run: yarn run lint
+            - name: prettier check
+              run: yarn run test-format
+            - name: mocha tests
+              run: yarn run test
