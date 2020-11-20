@@ -28,7 +28,6 @@ export default class Client {
      * Load the Client data.
      * @function loadData
      * @memberof Client
-     * @private
      * @async
      * @returns {Promise<void>}
      */
