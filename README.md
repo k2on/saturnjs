@@ -27,4 +27,22 @@ As for now, there is no way to programmatically authenticate because Saturn uses
 
 The best solution I have come up with is to use the value of the `SATURN_TOKEN` cookie. As for what I know, does not expire (fingers crossed).
 
+<hr>
+
+## How to get the token
+
+<img height="400px" src="https://i.imgur.com/MzYFAqC.png">
+
+After logging on, click the Padlock next to the URL. THene click on Cookies.
+
+<img height="400px" src="https://i.imgur.com/vfAoKJE.png">
+
+Click the drop down menue for "saturn.live", then open all the cookies
+
+<img height="400px" src="https://i.imgur.com/hXsTKE1.png">
+
+Click on the `SATURN_TOKEN` cookie, then copy the content of the token.
+
+<hr>
+
 Full docs can be found [here](https://k2on.github.io/saturnjs/)

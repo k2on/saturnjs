@@ -1,5 +1,5 @@
 {
-    "name": "saturn.js",
+    "name": "saturnjs",
     "version": "1.0.0",
     "description": "The unofficiial Saturn API Wrapper",
     "main": "./dist/index.js",
