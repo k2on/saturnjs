@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ProfilePictureType | Documentation</title>
+	<title>SchoolMetaType | Documentation</title>
 	<meta name="description" content="Documentation for Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_types_profilepicturetype_.html">&quot;types/ProfilePictureType&quot;</a>
+					<a href="../modules/_types_schoolmetatype_.html">&quot;types/SchoolMetaType&quot;</a>
 				</li>
 				<li>
-					<a href="_types_profilepicturetype_.profilepicturetype.html">ProfilePictureType</a>
+					<a href="_types_schoolmetatype_.schoolmetatype.html">SchoolMetaType</a>
 				</li>
 			</ul>
-			<h1>Interface ProfilePictureType</h1>
+			<h1>Interface SchoolMetaType</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ProfilePictureType</span>
+						<span class="target">SchoolMetaType</span>
 					</li>
 				</ul>
 			</section>
@@ -84,11 +84,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#metadata" class="tsd-kind-icon">metadata</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#resourceurl" class="tsd-kind-icon">resource<wbr>Url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#sizeurls" class="tsd-kind-icon">size<wbr>Urls</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_schoolmetatype_.schoolmetatype.html#chatminimumdepth" class="tsd-kind-icon">chat<wbr>Minimum<wbr>Depth</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_schoolmetatype_.schoolmetatype.html#features" class="tsd-kind-icon">features</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_schoolmetatype_.schoolmetatype.html#freeperiodcourseid" class="tsd-kind-icon">free<wbr>Period<wbr>Course<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_schoolmetatype_.schoolmetatype.html#studentscount" class="tsd-kind-icon">students<wbr>Count</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_schoolmetatype_.schoolmetatype.html#usercount" class="tsd-kind-icon">user<wbr>Count</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,52 +97,81 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="contenttype" class="tsd-anchor"></a>
-					<h3>content<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">content<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="chatminimumdepth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> chat<wbr>Minimum<wbr>Depth</h3>
+					<div class="tsd-signature tsd-kind-icon">chat<wbr>Minimum<wbr>Depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L9">types/ProfilePictureType.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/SchoolMetaType.ts#L3">types/SchoolMetaType.ts:3</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="features" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> features</h3>
+					<div class="tsd-signature tsd-kind-icon">features<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>chatTab<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>chatUnlocked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>chatUnlockedWeb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>crushCopy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>gradeChats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>localScheduleChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>swapCoursesListAndShareButtons<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>userJoinedClassNotifications<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L8">types/ProfilePictureType.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/SchoolMetaType.ts#L6">types/SchoolMetaType.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>chat<wbr>Tab<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>chat<wbr>Unlocked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>chat<wbr>Unlocked<wbr>Web<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>crush<wbr>Copy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>grade<wbr>Chats<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>local<wbr>Schedule<wbr>Change<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>swap<wbr>Courses<wbr>List<wbr>And<wbr>Share<wbr>Buttons<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>user<wbr>Joined<wbr>Class<wbr>Notifications<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="freeperiodcourseid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> free<wbr>Period<wbr>Course<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">free<wbr>Period<wbr>Course<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/SchoolMetaType.ts#L2">types/SchoolMetaType.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="metadata" class="tsd-anchor"></a>
-					<h3>metadata</h3>
-					<div class="tsd-signature tsd-kind-icon">metadata<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span></div>
+					<a name="studentscount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> students<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">students<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L10">types/ProfilePictureType.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/SchoolMetaType.ts#L5">types/SchoolMetaType.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="resourceurl" class="tsd-anchor"></a>
-					<h3>resource<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">resource<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="usercount" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> user<wbr>Count</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L11">types/ProfilePictureType.ts:11</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="sizeurls" class="tsd-anchor"></a>
-					<h3>size<wbr>Urls</h3>
-					<div class="tsd-signature tsd-kind-icon">size<wbr>Urls<span class="tsd-signature-symbol">:</span> <a href="_types_profilepicturetype_.sizeurlstype.html" class="tsd-signature-type">SizeUrlsType</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L12">types/ProfilePictureType.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/SchoolMetaType.ts#L4">types/SchoolMetaType.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -181,10 +210,10 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_types_permissionstype_.html">&quot;types/<wbr>Permissions<wbr>Type&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_types_profilepicturetype_.html">&quot;types/<wbr>Profile<wbr>Picture<wbr>Type&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_types_schoolmetatype_.html">&quot;types/<wbr>School<wbr>Meta<wbr>Type&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -209,30 +238,27 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_types_profilepicturetype_.profilepicturetype.html" class="tsd-kind-icon">Profile<wbr>Picture<wbr>Type</a>
+						<a href="_types_schoolmetatype_.schoolmetatype.html" class="tsd-kind-icon">School<wbr>Meta<wbr>Type</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a>
+								<a href="_types_schoolmetatype_.schoolmetatype.html#chatminimumdepth" class="tsd-kind-icon">chat<wbr>Minimum<wbr>Depth</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#id" class="tsd-kind-icon">id</a>
+								<a href="_types_schoolmetatype_.schoolmetatype.html#features" class="tsd-kind-icon">features</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#metadata" class="tsd-kind-icon">metadata</a>
+								<a href="_types_schoolmetatype_.schoolmetatype.html#freeperiodcourseid" class="tsd-kind-icon">free<wbr>Period<wbr>Course<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#resourceurl" class="tsd-kind-icon">resource<wbr>Url</a>
+								<a href="_types_schoolmetatype_.schoolmetatype.html#studentscount" class="tsd-kind-icon">students<wbr>Count</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#sizeurls" class="tsd-kind-icon">size<wbr>Urls</a>
+								<a href="_types_schoolmetatype_.schoolmetatype.html#usercount" class="tsd-kind-icon">user<wbr>Count</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_types_profilepicturetype_.sizeurlstype.html" class="tsd-kind-icon">Size<wbr>Urls<wbr>Type</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

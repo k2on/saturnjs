@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ProfilePictureType | Documentation</title>
+	<title>LunchType | Documentation</title>
 	<meta name="description" content="Documentation for Documentation">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_types_profilepicturetype_.html">&quot;types/ProfilePictureType&quot;</a>
+					<a href="../modules/_types_lunchtype_.html">&quot;types/LunchType&quot;</a>
 				</li>
 				<li>
-					<a href="_types_profilepicturetype_.profilepicturetype.html">ProfilePictureType</a>
+					<a href="_types_lunchtype_.lunchtype.html">LunchType</a>
 				</li>
 			</ul>
-			<h1>Interface ProfilePictureType</h1>
+			<h1>Interface LunchType</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">ProfilePictureType</span>
+						<span class="target">LunchType</span>
 					</li>
 				</ul>
 			</section>
@@ -84,11 +84,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#metadata" class="tsd-kind-icon">metadata</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#resourceurl" class="tsd-kind-icon">resource<wbr>Url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_profilepicturetype_.profilepicturetype.html#sizeurls" class="tsd-kind-icon">size<wbr>Urls</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#duration" class="tsd-kind-icon">duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#firstwavenow" class="tsd-kind-icon">first<wbr>Wave<wbr>Now</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#firstwavenowoffset" class="tsd-kind-icon">first<wbr>Wave<wbr>Now<wbr>Offset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#firstwavepass" class="tsd-kind-icon">first<wbr>Wave<wbr>Pass</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#lastwavepass" class="tsd-kind-icon">last<wbr>Wave<wbr>Pass</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#passingduration" class="tsd-kind-icon">passing<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#wavefrequency" class="tsd-kind-icon">wave<wbr>Frequency</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_lunchtype_.lunchtype.html#waves" class="tsd-kind-icon">waves</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,52 +100,82 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="contenttype" class="tsd-anchor"></a>
-					<h3>content<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">content<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="duration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> duration</h3>
+					<div class="tsd-signature tsd-kind-icon">duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L9">types/ProfilePictureType.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L2">types/LunchType.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="firstwavenow" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> first<wbr>Wave<wbr>Now</h3>
+					<div class="tsd-signature tsd-kind-icon">first<wbr>Wave<wbr>Now<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L8">types/ProfilePictureType.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L6">types/LunchType.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="metadata" class="tsd-anchor"></a>
-					<h3>metadata</h3>
-					<div class="tsd-signature tsd-kind-icon">metadata<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unknown</span></div>
+					<a name="firstwavenowoffset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> first<wbr>Wave<wbr>Now<wbr>Offset</h3>
+					<div class="tsd-signature tsd-kind-icon">first<wbr>Wave<wbr>Now<wbr>Offset<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L10">types/ProfilePictureType.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L7">types/LunchType.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="resourceurl" class="tsd-anchor"></a>
-					<h3>resource<wbr>Url</h3>
-					<div class="tsd-signature tsd-kind-icon">resource<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="firstwavepass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> first<wbr>Wave<wbr>Pass</h3>
+					<div class="tsd-signature tsd-kind-icon">first<wbr>Wave<wbr>Pass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L11">types/ProfilePictureType.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L8">types/LunchType.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="sizeurls" class="tsd-anchor"></a>
-					<h3>size<wbr>Urls</h3>
-					<div class="tsd-signature tsd-kind-icon">size<wbr>Urls<span class="tsd-signature-symbol">:</span> <a href="_types_profilepicturetype_.sizeurlstype.html" class="tsd-signature-type">SizeUrlsType</a></div>
+					<a name="lastwavepass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> last<wbr>Wave<wbr>Pass</h3>
+					<div class="tsd-signature tsd-kind-icon">last<wbr>Wave<wbr>Pass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/ProfilePictureType.ts#L12">types/ProfilePictureType.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L9">types/LunchType.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="passingduration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> passing<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">passing<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L4">types/LunchType.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="wavefrequency" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> wave<wbr>Frequency</h3>
+					<div class="tsd-signature tsd-kind-icon">wave<wbr>Frequency<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L3">types/LunchType.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="waves" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> waves</h3>
+					<div class="tsd-signature tsd-kind-icon">waves<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/k2on/saturnjs/blob/1db3e51/src/types/LunchType.ts#L5">types/LunchType.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -175,13 +208,13 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/_index_.html">&quot;index&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/_types_lunchtype_.html">&quot;types/<wbr>Lunch<wbr>Type&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/_types_permissionstype_.html">&quot;types/<wbr>Permissions<wbr>Type&quot;</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/_types_profilepicturetype_.html">&quot;types/<wbr>Profile<wbr>Picture<wbr>Type&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -209,30 +242,36 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="_types_profilepicturetype_.profilepicturetype.html" class="tsd-kind-icon">Profile<wbr>Picture<wbr>Type</a>
+						<a href="_types_lunchtype_.lunchtype.html" class="tsd-kind-icon">Lunch<wbr>Type</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a>
+								<a href="_types_lunchtype_.lunchtype.html#duration" class="tsd-kind-icon">duration</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#id" class="tsd-kind-icon">id</a>
+								<a href="_types_lunchtype_.lunchtype.html#firstwavenow" class="tsd-kind-icon">first<wbr>Wave<wbr>Now</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#metadata" class="tsd-kind-icon">metadata</a>
+								<a href="_types_lunchtype_.lunchtype.html#firstwavenowoffset" class="tsd-kind-icon">first<wbr>Wave<wbr>Now<wbr>Offset</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#resourceurl" class="tsd-kind-icon">resource<wbr>Url</a>
+								<a href="_types_lunchtype_.lunchtype.html#firstwavepass" class="tsd-kind-icon">first<wbr>Wave<wbr>Pass</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_types_profilepicturetype_.profilepicturetype.html#sizeurls" class="tsd-kind-icon">size<wbr>Urls</a>
+								<a href="_types_lunchtype_.lunchtype.html#lastwavepass" class="tsd-kind-icon">last<wbr>Wave<wbr>Pass</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_types_lunchtype_.lunchtype.html#passingduration" class="tsd-kind-icon">passing<wbr>Duration</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_types_lunchtype_.lunchtype.html#wavefrequency" class="tsd-kind-icon">wave<wbr>Frequency</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_types_lunchtype_.lunchtype.html#waves" class="tsd-kind-icon">waves</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-is-not-exported">
-						<a href="_types_profilepicturetype_.sizeurlstype.html" class="tsd-kind-icon">Size<wbr>Urls<wbr>Type</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
