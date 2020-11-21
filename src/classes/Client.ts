@@ -2,6 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { User } from '.';
 
 import { BASE_URL, HOME_URL } from '../constants';
+import School from './School';
 
 /**
  * Class for representing a Saturn Client.
@@ -31,7 +32,7 @@ export default class Client {
      * @async
      * @returns {Promise<void>}
      */
-    async loadData(): Promise<void> {
+    async getUserData(): Promise<void> {
         const response = await axios.get(HOME_URL, {
             headers: {
                 Cookie: 'SATURN_TOKEN=' + this.token,
@@ -48,10 +49,15 @@ export default class Client {
         const initialState = nextData.props.initialState;
 
         this.user = User.deserialize(initialState.user);
+    }
 
-        console.log(this.user);
-
-        // console.log(Object.keys(nextData));
-        // console.log(JSON.stringify(nextData, null, 4));
+    /**
+     * Returns a School calender from its id.
+     * @param {string} schoolId ID of the school.
+     * @returns {Promise<any>} Calender.
+     */
+    async getSchoolCalender(schoolId: string): Promise<School> {
+        const response = await this.axios.get(`schools/${schoolId}`);
+        return School.deserialize(response.data);
     }
 }

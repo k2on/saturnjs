@@ -10,9 +10,17 @@ const main = async () => {
         throw Error('NO TOKEN GIVEN');
     }
     const client = new Client(token);
-    await client.loadData().catch((err) => {
+    await client.getUserData().catch((err) => {
         console.error(err);
     });
+    const cal = await client
+        .getSchoolCalender(client.user.schoolid)
+        .catch((err) => {
+            console.log(err);
+            throw err;
+        });
+    console.log(cal);
+    console.log(cal.title);
 };
 
 main();
