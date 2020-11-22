@@ -1,6 +1,12 @@
-import { LunchType, SchoolMetaType, StaffType } from '../types';
+import {
+    LunchType,
+    SchoolMetaType,
+    StaffType,
+    SchoolType,
+    SchoolTypeFull,
+    StudentType,
+} from '../types';
 
-import SchoolType from '../types/SchoolType';
 import { Student } from '.';
 
 /**
@@ -77,7 +83,11 @@ export default class School {
      * @param   {SchoolType} data Shape of the serialized data.
      * @returns {School} The new School instance.
      */
-    static deserialize(data: SchoolType): School {
+    static deserialize(data: SchoolType | SchoolTypeFull): School {
+        // @ts-expect-error TODO: find a better solution
+        const staff = data.staff || [];
+        // @ts-expect-error TODO: find a better solution
+        const users = data.users || [];
         return new School(
             new Date(data.created_at),
             new Date(data.updated_at),
@@ -133,8 +143,8 @@ export default class School {
                         data.meta.features.user_joined_class_notifications,
                 },
             },
-            data.staff,
-            data.users.map((user) => Student.deserialize(user)),
+            staff,
+            users.map((user: StudentType) => Student.deserialize(user)),
         );
     }
 

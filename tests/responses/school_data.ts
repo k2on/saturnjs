@@ -1,6 +1,6 @@
-import SchoolType from '../../src/types/SchoolType';
+import { SchoolsListType, SchoolType, SchoolTypeFull } from '../../src/types';
 
-export const SCHOOL_DATA_RESPONSE: SchoolType = {
+export const SCHOOL_DATA: SchoolType = {
     created_at: '2002-11-02T00:00:00.000000',
     updated_at: '2003-03-02T00:00:00.000000',
     school_name: 'clonehigh',
@@ -9,7 +9,7 @@ export const SCHOOL_DATA_RESPONSE: SchoolType = {
     cohort_types: [],
     static_schedules: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
     school_title: 'Clone High School',
-    nickname: 'CLone High',
+    nickname: 'Clone High',
     period_names: ['1', '2', '3', '4', '5', '6', '7', '8'],
     lunch_length: 25,
     lunch_wave_frequency: null,
@@ -27,8 +27,8 @@ export const SCHOOL_DATA_RESPONSE: SchoolType = {
     district_code: 'clone_high_school_district_tx',
     county_code: null,
     timezone: 'US/Eastern',
-    lat: 0,
-    lng: 0,
+    lat: 69,
+    lng: -69,
     notes: null,
     schedule_tags: [],
     private: false,
@@ -50,6 +50,14 @@ export const SCHOOL_DATA_RESPONSE: SchoolType = {
             user_joined_class_notifications: false,
         },
     },
-    users: [],
-    staff: [],
+};
+
+export const SCHOOLS_RESPONSE: SchoolsListType = [SCHOOL_DATA];
+
+export const SCHOOL_RESPONSE: SchoolTypeFull = {
+    ...SCHOOL_DATA,
+    ...{
+        users: [],
+        staff: [],
+    },
 };

@@ -1,6 +1,6 @@
 import { StudentType, StaffType } from '.';
 
-export default interface SchoolType {
+export interface SchoolType {
     readonly created_at: string;
     readonly updated_at: string;
     readonly school_name: string;
@@ -50,6 +50,9 @@ export default interface SchoolType {
             user_joined_class_notifications: boolean;
         };
     };
-    readonly staff: StaffType[];
-    readonly users: StudentType[];
+}
+
+export interface SchoolTypeFull extends SchoolType {
+    staff: StaffType[];
+    users: StudentType[];
 }

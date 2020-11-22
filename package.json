@@ -12,7 +12,7 @@
     "scripts": {
         "format": "prettier --write ./src/**",
         "test-format": "prettier --check ./src/**",
-        "test": "mocha -r ts-node/register tests/**",
+        "test": "mocha -r ts-node/register tests/** --timeout 4000",
         "lint": "eslint src/**",
         "mk-docs": "typedoc --name \"Documentation\" && touch ./docs/.nojekyll",
         "prepublish": "tsc"

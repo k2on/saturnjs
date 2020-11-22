@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import { User, School } from '.';
 
 import { BASE_URL, HOME_URL } from '../constants';
-import SchoolType from '../types/SchoolType';
+import { SchoolType } from '../types';
 
 /**
  * Class for representing a Saturn Client.
