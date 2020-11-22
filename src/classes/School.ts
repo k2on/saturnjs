@@ -1,4 +1,4 @@
-import { LunchType, SchoolMetaType, TeacherType } from '../types';
+import { LunchType, SchoolMetaType, StaffType } from '../types';
 
 import SchoolType from '../types/SchoolType';
 import { Student } from '.';
@@ -12,7 +12,7 @@ export default class School {
      * Constructor for the school class.
      * @param {string | null} createdAt CreatedAt.
      * @param {string | null} updatedAt UpdatedAt.
-     * @param {string | null} schoolName SchoolName.
+     * @param {string | null} name SchoolName.
      * @param {string | null} status Status.
      * @param {string | null} domains Domains.
      * @param {string | null} cohortTypes CohortTypes.
@@ -43,7 +43,7 @@ export default class School {
     constructor(
         public createdAt: Date,
         public updatedAt: Date,
-        public schoolName: string,
+        public name: string,
         public status: string,
         public domains: string[],
         public cohortTypes: string[],
@@ -68,7 +68,7 @@ export default class School {
         public districtName: string,
         public districtSchoolCount: number,
         public meta: SchoolMetaType,
-        public staff: TeacherType[],
+        public staff: StaffType[],
         public users: Student[],
     ) {}
 
@@ -133,8 +133,15 @@ export default class School {
                         data.meta.features.user_joined_class_notifications,
                 },
             },
-            [],
-            [],
+            data.staff,
+            data.users.map((user) => Student.deserialize(user)),
         );
+    }
+
+    /**
+     * Gets the schedule from the school Id.
+     */
+    async getSchedule(): Promise<void> {
+        return;
     }
 }

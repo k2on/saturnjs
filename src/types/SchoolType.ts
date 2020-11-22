@@ -1,4 +1,4 @@
-import { StudentType, TeacherType } from '.';
+import { StudentType, StaffType } from '.';
 
 export default interface SchoolType {
     readonly created_at: string;
@@ -50,6 +50,6 @@ export default interface SchoolType {
             user_joined_class_notifications: boolean;
         };
     };
-    readonly staff: TeacherType[];
+    readonly staff: StaffType[];
     readonly users: StudentType[];
 }

@@ -1,8 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
-import { User } from '.';
+import { User, School } from '.';
 
 import { BASE_URL, HOME_URL } from '../constants';
-import School from './School';
+import SchoolType from '../types/SchoolType';
 
 /**
  * Class for representing a Saturn Client.
@@ -10,7 +10,8 @@ import School from './School';
  */
 export default class Client {
     private axios: AxiosInstance;
-    public user: User;
+    public user: User | null = null;
+    public schools: School[];
 
     /**
      * Constructor for the Client.
@@ -26,13 +27,25 @@ export default class Client {
     }
 
     /**
+     * Gets the current school.
+     * @returns {School | null} School object or null if not exists.
+     */
+    get school(): School | null {
+        if (this.schools.length == 0) return null;
+        if (this.schools.length == 1) return this.schools[0];
+        throw Error(
+            'if you are seeing this error, PLEASE create an issue on gh',
+        );
+    }
+
+    /**
      * Load the Client data.
      * @function loadData
      * @memberof Client
      * @async
-     * @returns {Promise<void>}
+     * @returns {Promise<User>} The user generated.
      */
-    async getUserData(): Promise<void> {
+    async getUserData(): Promise<User> {
         const response = await axios.get(HOME_URL, {
             headers: {
                 Cookie: 'SATURN_TOKEN=' + this.token,
@@ -49,6 +62,20 @@ export default class Client {
         const initialState = nextData.props.initialState;
 
         this.user = User.deserialize(initialState.user);
+        return this.user;
+    }
+
+    /**
+     * Returns a list of Schools.
+     * @returns {Promise<School[]>} List of schools.
+     */
+    async getSchools(): Promise<School[]> {
+        if (this.user == null) this.user = await this.getUserData();
+        const response = await this.axios.get('schools');
+        this.schools = response.data.map((school: SchoolType) =>
+            School.deserialize(school),
+        );
+        return this.schools;
     }
 
     /**
@@ -56,8 +83,11 @@ export default class Client {
      * @param {string} schoolId ID of the school.
      * @returns {Promise<any>} Calender.
      */
-    async getSchoolCalender(schoolId: string): Promise<School> {
-        const response = await this.axios.get(`schools/${schoolId}`);
-        return School.deserialize(response.data);
-    }
+    // async getSchoolData(schoolId: string | null = null): Promise<School> {
+    //     if (this.user == null) this.user = await this.getUserData();
+    //     if (schoolId == null) schoolId = this.user.schoolId;
+    //     const response = await this.axios.get(`schools/${schoolId}`);
+    //     this.school = School.deserialize(response.data);
+    //     return this.school;
+    // }
 }

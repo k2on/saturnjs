@@ -36,7 +36,7 @@ export default class User extends Student {
      * @param {boolean}            isPhoneValidated  If the phone number is validated.
      * @param {string[]}           tags              Tags.
      * @param {string | null}      waitlistSchoolId  Waitlist School ID.
-     * @param {string}             schoolid          User's school's identifier.
+     * @param {string}             schoolId          User's school's identifier.
      * @param {string}             hashid            HashID.
      * @param {string}             schoolTitle       Name of the user's school.
      * @param {PermissionsType}    permissions       Permissions.
@@ -71,7 +71,7 @@ export default class User extends Student {
         public readonly isPhoneValidated: boolean = false,
         public readonly tags: string[] = [],
         public readonly waitlistSchoolId: number | null = null,
-        public readonly schoolid: string,
+        public readonly schoolId: string,
         public readonly hashid: string,
         public readonly schoolTitle: string,
         public readonly permissions: PermissionsType = {
